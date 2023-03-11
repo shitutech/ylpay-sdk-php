@@ -39,6 +39,15 @@ abstract class BaseResponse
         return strtoupper(trim($this->status)) == 'SUCCESS';
     }
 
+    /**
+     * 是否将 data 转为解析为类属性
+     *
+     * @return bool
+     */
+    public function isD2P(): bool
+    {
+        return false;
+    }
 
     /**
      * @param array $resultData

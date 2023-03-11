@@ -50,6 +50,21 @@ final class ClientResponse
             throw new \Exception("响应报告发生异常。Err: {$decodeData['errCode']}::{$decodeData['errMsg']}", 1000);
         }
 
+        if ($this->response->isD2P()) {
+            if (!isset($decodeData['data'])) {
+                throw new \Exception("响应数据缺少业务数据字段 data", 1000);
+            }
+
+            if (!is_array($decodeData['data']) || !$decodeData['data']) {
+                throw new \Exception("业务数据无效", 1000);
+            }
+
+            $bizData = $decodeData['data'];
+            unset($decodeData['data']);
+
+            $decodeData = array_merge($bizData, $decodeData);
+        }
+
         $this->response->setProperty($decodeData);
 
         return $this->response;

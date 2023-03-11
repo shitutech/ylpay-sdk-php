@@ -27,6 +27,7 @@ JAVA SDK 请参考： https://github.com/shitutech/ylpay-sdk-java
 ```shell
 composer.phar require shitutech/ylpay
 ```
+
 ## 调用
 
 ```php
@@ -58,6 +59,12 @@ try {
 
 # 接口
 
-| API   | 请求类                 | 响应类                  |
-|-------|---------------------|----------------------|
-| 营业员登录 | LoginRequest::class | LoginResponse::class |
+| API       | 请求类                        | 响应类                         |
+|-----------|----------------------------|-----------------------------|
+| 营业员登录     | LoginRequest::class        | LoginResponse::class        |
+| B扫C支付     | BarcodePayRequest::class   | BarcodePayResponse::class   |
+| C扫B支付     | ScanPayRequest::class      | ScanPayResponse::class      |
+| 商户自主C扫B支付 | MerchScanPayRequest::class | MerchScanPayResponse::class |
+| 微信小程序支付   | LitePayRequest::class      | LitePayResponse::class      |
+| 支付宝动码     | DynamicPayRequest::class   | DynamicPayResponse::class   |
+| 订单轮询      | PollingOrderRequest::class | PollingOrderResponse::class |

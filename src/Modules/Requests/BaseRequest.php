@@ -86,8 +86,16 @@ abstract class BaseRequest
 
         $clzProperties = get_object_vars($this);
 
+        $ignoreEmptyProperties = self::IGNORE_EMPTY_COMMON_PARAMS;
+        if (
+            defined('static::IGNORE_EMPTY_PROPERTIES') &&
+            static::IGNORE_EMPTY_PROPERTIES && is_array(static::IGNORE_EMPTY_PROPERTIES)
+        ) {
+            $ignoreEmptyProperties = array_merge($ignoreEmptyProperties, static::IGNORE_EMPTY_PROPERTIES);
+        }
+
         foreach ($clzProperties as $property => $propertyValue) {
-            if (in_array($property, self::IGNORE_EMPTY_COMMON_PARAMS) && trim($propertyValue) === '') {
+            if (in_array($property, $ignoreEmptyProperties) && trim($propertyValue) === '') {
                 continue;
             }
 
