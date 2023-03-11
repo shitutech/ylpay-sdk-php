@@ -17,13 +17,13 @@ final class LoginRequest extends BaseRequest
     protected $pwd = '';
 
     /**
-     * @var bool 是否更新用户token（更新后旧 token 将立即失效）；更新值为小写 true，否则不更新
+     * @var string 是否更新用户token（更新后旧 token 将立即失效）；更新值为小写 true，否则不更新
      */
-    protected $refreshToken = false;
+    protected $refreshToken = 'false';
 
     public function getApiPath(): string
     {
-        return 'merchant/clerk/login';
+        return '/merchant/clerk/login';
     }
 
     /**
@@ -54,7 +54,7 @@ final class LoginRequest extends BaseRequest
      */
     public function setRefreshToken(bool $refreshToken): self
     {
-        $this->refreshToken = $refreshToken;
+        $this->refreshToken = $refreshToken ? 'true' : 'false';
 
         return $this;
     }

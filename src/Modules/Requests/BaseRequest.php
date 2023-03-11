@@ -54,12 +54,19 @@ abstract class BaseRequest
     /**
      * @var string 签名（签名key请咨询BD或技术支持）
      */
-    protected $sign = '';
+    // protected $sign = '';
 
     // 通用参数 END
 
+    /**
+     * 大部分接口要用，在基类实现；为空时可忽略
+     * @var string 翼龙商户号
+     */
+    protected $mchid = '';
+
     private const IGNORE_EMPTY_COMMON_PARAMS = [
         'api_version', 'sn', 'bi', 'longitude', 'latitude', 'signType',
+        'mchid',
     ];
 
     /**
@@ -88,6 +95,17 @@ abstract class BaseRequest
         }
 
         return $toJson ? json_encode($bizData) : $bizData;
+    }
+
+    /**
+     * @param string $mchId
+     * @return BaseRequest
+     */
+    public function setMchId(string $mchId): self
+    {
+        $this->mchid = trim($mchId);
+
+        return $this;
     }
 
     /**
