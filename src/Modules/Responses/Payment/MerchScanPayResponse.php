@@ -107,16 +107,6 @@ final class MerchScanPayResponse extends BaseResponse
     protected $cloudPayInfo = [];
 
     /**
-     * {@inheritDoc}
-     *
-     * @return bool
-     */
-    public function isD2P(): bool
-    {
-        return true;
-    }
-
-    /**
      * @return string
      */
     public function getThirdCode(): string
