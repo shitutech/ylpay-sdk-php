@@ -59,19 +59,23 @@ try {
 
 # 接口
 
-| API       | 请求类                               | 响应类                                |
-|-----------|-----------------------------------|------------------------------------|
-| 营业员登录     | LoginRequest::class               | LoginResponse::class               |
-| B扫C支付     | BarcodePayRequest::class          | BarcodePayResponse::class          |
-| C扫B支付     | ScanPayRequest::class             | ScanPayResponse::class             |
-| 商户自主C扫B支付 | MerchScanPayRequest::class        | MerchScanPayResponse::class        |
-| 微信小程序支付   | LitePayRequest::class             | LitePayResponse::class             |
-| 支付宝动码     | DynamicPayRequest::class          | DynamicPayResponse::class          |
-| 订单轮询      | PollingOrderRequest::class        | PollingOrderResponse::class        |
-| 订单退款      | RefundRequest::class              | RefundResponse::class              |
-| 订单撤销      | CancelRequest::class              | CancelResponse::class              |
-| 分账回退成功通知  | ShareRollbackNotifyRequest::class | ShareRollbackNotifyResponse::class |
-| 订单列表      | ListRequest::class                | ListResponse::class                |
-| 订单详情      | DetailRequest::class              | DetailResponse::class              |
-| 订单退款列表    | RefundListRequest::class          | RefundListResponse::class          |
-| 订单退款详情    | RefundDetailRequest::class        | RefundDetailResponse::class        |
+| API        | 请求类                               | 响应类                                |
+|------------|-----------------------------------|------------------------------------|
+| 营业员登录      | LoginRequest::class               | LoginResponse::class               |
+| B扫C支付      | BarcodePayRequest::class          | BarcodePayResponse::class          |
+| C扫B支付      | ScanPayRequest::class             | ScanPayResponse::class             |
+| 商户自主C扫B支付  | MerchScanPayRequest::class        | MerchScanPayResponse::class        |
+| 微信小程序支付    | LitePayRequest::class             | LitePayResponse::class             |
+| 支付宝动码      | DynamicPayRequest::class          | DynamicPayResponse::class          |
+| 订单轮询       | PollingOrderRequest::class        | PollingOrderResponse::class        |
+| 订单退款       | RefundRequest::class              | RefundResponse::class              |
+| 订单撤销       | CancelRequest::class              | CancelResponse::class              |
+| 分账回退成功通知   | ShareRollbackNotifyRequest::class | ShareRollbackNotifyResponse::class |
+| 订单列表       | ListRequest::class                | ListResponse::class                |
+| 订单详情       | DetailRequest::class              | DetailResponse::class              |
+| 订单退款列表     | RefundListRequest::class          | RefundListResponse::class          |
+| 订单退款详情     | RefundDetailRequest::class        | RefundDetailResponse::class        |
+| 子商户余额查询    | InquiryBalanceRequest::class      | InquiryBalanceResponse::class      |
+| 子商户提现      | WithdrawRequest::class            | WithdrawResponse::class            |
+| 子商户提现查询    | InquiryWithdrawRequest::class     | InquiryWithdrawResponse::class     |
+| 微信公众号小程序绑定 | AppIdBindRequest::class           | AppIdBindResponse::class           |

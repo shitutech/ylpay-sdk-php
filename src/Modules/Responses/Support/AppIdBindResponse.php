@@ -1,13 +1,13 @@
 <?php
 
-namespace Shitutech\YlPay\Modules\Responses\Order;
+namespace Shitutech\YlPay\Modules\Responses\Support;
 
 use Shitutech\YlPay\Modules\Responses\BaseResponse;
 
-final class RefundListResponse extends BaseResponse
+class AppIdBindResponse extends BaseResponse
 {
     /**
-     * @var array 记录
+     * @var array 详情数据
      */
     protected $data = [];
 
