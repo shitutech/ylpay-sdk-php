@@ -71,3 +71,7 @@ try {
 | 订单退款      | RefundRequest::class              | RefundResponse::class              |
 | 订单撤销      | CancelRequest::class              | CancelResponse::class              |
 | 分账回退成功通知  | ShareRollbackNotifyRequest::class | ShareRollbackNotifyResponse::class |
+| 订单列表      | ListRequest::class                | ListResponse::class                |
+| 订单详情      | DetailRequest::class              | DetailResponse::class              |
+| 订单退款列表    | RefundListRequest::class          | RefundListResponse::class          |
+| 订单退款详情    | RefundDetailRequest::class        | RefundDetailResponse::class        |
